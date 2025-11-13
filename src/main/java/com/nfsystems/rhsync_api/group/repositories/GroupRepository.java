@@ -11,7 +11,8 @@ public interface GroupRepository extends JpaRepository<Group, Long> {
 
     @QueryHints(value = {
             @QueryHint(name = "jakarta.persistence.cache.retrieveMode", value = "USE"),
-            @QueryHint(name = "jakarta.persistence.cache.storeMode", value = "USE")
+            @QueryHint(name = "jakarta.persistence.cache.storeMode", value = "USE"),
+            @QueryHint(name = "org.hibernate.readOnly", value = "true")
     })
     Optional<Group> findBySlug(String slug);
 }
