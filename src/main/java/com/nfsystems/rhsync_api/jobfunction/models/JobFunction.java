@@ -34,6 +34,9 @@ public class JobFunction extends BaseEntity {
     @Column(name = "rhs_ins_jobfun")
     private Boolean insalubrity;
 
+    @Column(name = "rhs_degrins_jobfun")
+    private Integer degreeInsalubrity;
+
     @Column(name = "rhs_per_jobfun", length = 80)
     private Boolean periculosity;
 

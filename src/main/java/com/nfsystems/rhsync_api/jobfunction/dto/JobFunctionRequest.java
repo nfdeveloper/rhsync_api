@@ -14,6 +14,7 @@ public class JobFunctionRequest {
     private String name;
     private String description;
     private Boolean insalubrity;
+    private Integer degreeInsalubrity;
     private Boolean periculosity;
     private Boolean needEpi;
     private BigDecimal salaryBase;
