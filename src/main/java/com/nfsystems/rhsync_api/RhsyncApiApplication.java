@@ -20,30 +20,33 @@ public class RhsyncApiApplication {
 		SpringApplication.run(RhsyncApiApplication.class, args);
 	}
 
-//    @Bean
-//    public CommandLineRunner runner(RoleRepository roleRepository) {
-//        Set<Role> roles = new HashSet<>();
-//        return args -> {
-//            if(roleRepository.findByName("EMPLOYEE").isEmpty()) {
-//                roles.add(Role.builder().name("EMPLOYEE").build());
-//            }
-//            if(roleRepository.findByName("MANAGER").isEmpty()) {
-//                roles.add(Role.builder().name("MANAGER").build());
-//            }
-//            if(roleRepository.findByName("MANAGER_SECTOR").isEmpty()) {
-//                roles.add(Role.builder().name("MANAGER_SECTOR").build());
-//            }
-//            if(roleRepository.findByName("DIRECTOR").isEmpty()) {
-//                roles.add(Role.builder().name("DIRECTOR").build());
-//            }
-//            if(roleRepository.findByName("ADMIN").isEmpty()) {
-//                roles.add(Role.builder().name("ADMIN").build());
-//            }
-//            if(roleRepository.findByName("TI").isEmpty()) {
-//                roles.add(Role.builder().name("TI").build());
-//            }
-//
-//            roleRepository.saveAll(roles);
-//        };
-//    }
+    @Bean
+    public CommandLineRunner runner(RoleRepository roleRepository) {
+        Set<Role> roles = new HashSet<>();
+        return args -> {
+            if(roleRepository.findByName("EMPLOYEE").isEmpty()) {
+                roles.add(Role.builder().name("EMPLOYEE").build());
+            }
+            if(roleRepository.findByName("MANAGER").isEmpty()) {
+                roles.add(Role.builder().name("MANAGER").build());
+            }
+            if(roleRepository.findByName("MANAGER_SECTOR").isEmpty()) {
+                roles.add(Role.builder().name("MANAGER_SECTOR").build());
+            }
+            if(roleRepository.findByName("DIRECTOR").isEmpty()) {
+                roles.add(Role.builder().name("DIRECTOR").build());
+            }
+            if(roleRepository.findByName("ADMIN").isEmpty()) {
+                roles.add(Role.builder().name("ADMIN").build());
+            }
+            if(roleRepository.findByName("TI").isEmpty()) {
+                roles.add(Role.builder().name("TI").build());
+            }
+            if(roleRepository.findByName("SECRETARY").isEmpty()) {
+                roles.add(Role.builder().name("SECRETARY").build());
+            }
+
+            roleRepository.saveAll(roles);
+        };
+    }
 }
