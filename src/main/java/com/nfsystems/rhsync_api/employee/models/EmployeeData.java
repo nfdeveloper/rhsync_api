@@ -31,16 +31,16 @@ public class EmployeeData {
     @Column(name = "rhs_st_empl")
     private EmployeeStatus employeeStatus;
 
-    @Column(name = "rhs_sal_empl", precision = 2, scale = 10)
+    @Column(name = "rhs_sal_empl", precision = 16, scale = 2)
     private BigDecimal salary;
 
-    @Column(name = "rhs_addsal_empl", precision = 2, scale = 10)
+    @Column(name = "rhs_addsal_empl", precision = 16, scale = 2)
     private BigDecimal additionalSalary;
 
     @Column(name = "rhs_istransvou_empl")
     private Boolean isTransportationVoucher;
 
-    @Column(name = "rhs_transvou_empl", precision = 2, scale = 10)
+    @Column(name = "rhs_transvou_empl", precision = 16, scale = 2)
     private BigDecimal transportationVoucher;
 
     @Column(name = "rhs_corpem_empl", length = 80)

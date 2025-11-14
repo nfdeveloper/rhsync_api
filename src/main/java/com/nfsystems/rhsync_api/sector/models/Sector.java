@@ -19,7 +19,7 @@ import lombok.experimental.SuperBuilder;
 @Table(
         name = "rhs_sect",
         indexes = {
-                @Index(name = "sect_idx_nm", columnList = "name"),
+                @Index(name = "sect_idx_nm", columnList = "rhs_nm_sect"),
         }
 
 )

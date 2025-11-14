@@ -3,6 +3,7 @@ package com.nfsystems.rhsync_api.security;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
@@ -28,9 +29,9 @@ public class SecurityConfig {
                 .cors(Customizer.withDefaults())
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(req ->
-                        req.requestMatchers(
-                                        "/auth/**"
-                                )
+                        req.requestMatchers(HttpMethod.POST, "api/v1/auth/register")
+                                .permitAll()
+                                .requestMatchers(HttpMethod.POST, "api/v1/auth/authenticate")
                                 .permitAll()
                                 .anyRequest()
                                 .authenticated()

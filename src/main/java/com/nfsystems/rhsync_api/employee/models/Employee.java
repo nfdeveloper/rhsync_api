@@ -23,9 +23,9 @@ import lombok.experimental.SuperBuilder;
 @Table(
         name = "rhs_empl",
         indexes = {
-                @Index(name = "empl_idx_cpf", columnList = "cpf", unique = true),
-                @Index(name = "empl_idx_rg", columnList = "rg", unique = true),
-                @Index(name = "empl_idx_workCard", columnList = "workCard", unique = true),
+                @Index(name = "empl_idx_cpf", columnList = "rhs_cpf_empl", unique = true),
+                @Index(name = "empl_idx_rg", columnList = "rhs_rg_empl", unique = true),
+                @Index(name = "empl_idx_workCard", columnList = "rhs_worcard_empl", unique = true),
         }
 
 )

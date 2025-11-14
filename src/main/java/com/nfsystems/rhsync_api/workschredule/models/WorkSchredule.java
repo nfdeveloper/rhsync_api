@@ -20,8 +20,8 @@ import java.time.LocalTime;
 @Table(
         name = "rhs_wrksc",
         indexes = {
-                @Index(name = "wrksc_idx_nm", columnList = "name"),
-                @Index(name = "wrksc_idx_entry", columnList = "entry")
+                @Index(name = "wrksc_idx_nm", columnList = "rhs_nm_wrksc"),
+                @Index(name = "wrksc_idx_entry", columnList = "rhs_ent_wrksc")
         }
 
 )

@@ -19,8 +19,8 @@ import lombok.experimental.SuperBuilder;
 @Table(
         name = "rhs_grp",
         indexes = {
-                @Index(name = "grp_idx_nm", columnList = "name", unique = true),
-                @Index(name = "grp_idx_slg", columnList = "slug", unique = true)
+                @Index(name = "grp_idx_nm", columnList = "rhs_nm_grp", unique = true),
+                @Index(name = "grp_idx_slg", columnList = "rhs_slg_grp", unique = true)
         }
 
 )

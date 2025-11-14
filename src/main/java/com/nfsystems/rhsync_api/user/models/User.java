@@ -67,7 +67,7 @@ public class User implements UserDetails, Principal {
     private Company company;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "rhs_seq_empl", referencedColumnName = "id")
+    @JoinColumn(name = "rhs_seq_empl", referencedColumnName = "rhs_seq_empl")
     private Employee employee;
 
     @CreatedDate

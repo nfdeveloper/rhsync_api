@@ -19,7 +19,7 @@ import lombok.experimental.SuperBuilder;
 @Entity
 @Table(name = "rhs_comp",
         indexes = {
-                @Index(name = "comp_idx_cnpj", columnList = "cnpj", unique = true)
+                @Index(name = "comp_idx_cnpj", columnList = "rhs_comp_cnpj", unique = true)
         })
 public class Company extends BaseEntity {
 
