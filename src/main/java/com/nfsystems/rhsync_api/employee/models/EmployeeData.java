@@ -5,9 +5,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -16,6 +14,8 @@ import java.time.LocalDate;
 @Setter
 @Builder
 @Embeddable
+@AllArgsConstructor
+@NoArgsConstructor
 public class EmployeeData {
 
     @Column(name = "rhs_dtadm_empl")

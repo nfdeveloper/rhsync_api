@@ -2,14 +2,14 @@ package com.nfsystems.rhsync_api.common.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @Builder
 @Embeddable
+@AllArgsConstructor
+@NoArgsConstructor
 public class Contact {
 
     @Column(name = "rhs_cont_em", length = 80, unique = true)
