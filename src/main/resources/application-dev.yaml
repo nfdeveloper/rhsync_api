@@ -41,6 +41,14 @@ application:
       consult_url: http://localhost:4200/relato/
       activate_account: http://localhost:4200/auth/activate_account
 
+minio:
+  config:
+    bucket-image-profile-name: imageprofile
+    bucket-image-group-name: imagegroup
+    access-key: minioadmin
+    secret-key: minioadmin123
+  url: http://localhost:9000
+
 logging:
   level:
     org:

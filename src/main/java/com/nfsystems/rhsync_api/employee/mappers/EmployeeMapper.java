@@ -19,12 +19,12 @@ public class EmployeeMapper {
     }
 
     public EmployeeResponse toDto(Employee obj){
-        return new EmployeeResponse(
-                obj.getId(),
-                obj.getPersonalData(),
-                obj.getEmployeeData(),
-                obj.getContact(),
-                obj.getAddress()
-        );
+        return EmployeeResponse.builder()
+                .id(obj.getId())
+                .employeeData(obj.getEmployeeData())
+                .personalData(obj.getPersonalData())
+                .address(obj.getAddress())
+                .contact(obj.getContact())
+                .build();
     }
 }

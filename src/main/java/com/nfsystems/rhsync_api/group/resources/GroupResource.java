@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
@@ -27,6 +28,12 @@ public class GroupResource {
     @GetMapping("{slug}")
     public ResponseEntity<GroupResponse> findBySlug(@PathVariable String slug){
         return ResponseEntity.ok(service.findBySlug(slug));
+    }
+
+    @PostMapping(value ="group-image/{groupId}", consumes = "multipart/form-data")
+    public ResponseEntity<?> uploadImageProfile(@RequestPart("file") MultipartFile file, @PathVariable Long groupId){
+        service.uploadImageLogo(file, groupId);
+        return ResponseEntity.accepted().build();
     }
 
     @PostMapping
