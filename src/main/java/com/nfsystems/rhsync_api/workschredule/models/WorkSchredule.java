@@ -47,9 +47,10 @@ public class WorkSchredule extends BaseEntity {
     @Column(name = "rhs_out_wrksc")
     private LocalTime out;
 
+    @Column(name = "rhs_hr_wrk_day_wrksc")
+    private Integer hoursWorkDay;
+
     @ManyToOne
     @JoinColumn(name = "rhs_seq_grp")
     private Group group;
-
-    //TODO - Employee
 }

@@ -7,6 +7,7 @@ import com.nfsystems.rhsync_api.company.models.Company;
 import com.nfsystems.rhsync_api.jobfunction.models.JobFunction;
 import com.nfsystems.rhsync_api.sector.models.Sector;
 import com.nfsystems.rhsync_api.user.models.User;
+import com.nfsystems.rhsync_api.workschredule.models.WorkSchredule;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -59,6 +60,10 @@ public class Employee extends BaseEntity {
     @ManyToOne
     @JoinColumn(name = "rhs_seq_jobfun")
     private JobFunction jobFunction;
+
+    @ManyToOne
+    @JoinColumn(name = "rhs_seq_wrksc")
+    private WorkSchredule workSchredule;
 
     @OneToOne(mappedBy = "employee")
     private User user;
