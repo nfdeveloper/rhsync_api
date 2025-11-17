@@ -31,12 +31,7 @@ public class MarkingResource {
 
     @PostMapping
     public ResponseEntity<Void> create(Authentication connectedUser, @RequestBody MarkingRequest request){
-        var id = service.create(request, connectedUser);
-        URI location = ServletUriComponentsBuilder
-                .fromCurrentRequest()
-                .path("/{id}")
-                .buildAndExpand(id)
-                .toUri();
-        return ResponseEntity.created(location).build();
+        service.create(request, connectedUser);
+        return ResponseEntity.accepted().build();
     }
 }

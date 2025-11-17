@@ -48,7 +48,7 @@ public class Marking extends BaseEntity {
 
     @Enumerated(EnumType.ORDINAL)
     @Column(name = "rhs_st_mrk")
-    private StatusMarking status;
+    private StatusMarking statusMarking;
 
     @ManyToOne
     @JoinColumn(name = "rhs_seq_empl")

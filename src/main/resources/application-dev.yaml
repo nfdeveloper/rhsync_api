@@ -49,6 +49,13 @@ minio:
     secret-key: minioadmin123
   url: http://localhost:9000
 
+marking:
+  config:
+    kafka:
+      server-url: 'http://localhost:29092'
+      topics:
+        marking: 'rhsync_marking'
+
 logging:
   level:
     org:
